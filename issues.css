@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Eczar:wght@600;700;800&family=Merriweather:wght@900&family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: #1c4a47;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+.home-sec{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    color: #c6dc93;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    
+}
+
+header .nav a{
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    transition: 0.3s;
+    border-radius: 20px;
+    transition-property: background;
+    color: white;
+    background: #1c4a47;
+}
+
+header .nav a:not(:last-child){
+    margin-right: 30px;
+}
+
+header .nav a:hover{
+    background-color: #c6dc93;
+    color: #1c4a47;
+}
+
+
+label{
+    display: none;
+}
+
+#check{
+    z-index: 3;
+    display: none;
+}
+
+
+@media (max-width: 960px){
+    header .nav{
+        display: none;
+    }
+
+    label{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+
+    label:hover{
+        color: #c6dc93;
+    }
+
+    label .close-btn{
+        display: none;
+    }
+
+    #check:checked ~ header .nav{
+        z-index: 2;
+        position: fixed;
+        background: #1c4a47e3;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #check:checked ~ header .nav a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+    #check:checked ~ header label .menu-btn{
+        display: none;
+    }
+
+    #check:checked ~ header label .close-btn{
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+
+    label .menu-btn{
+        position: absolute;
+    }
+
+    header .logo{
+        position: absolute;
+        bottom: -6px;
+    }
+
+
+    /* solution media query */
+
+
+    .section1, .section2{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .section1 .left, .section2 .right{
+        padding-bottom: 20px;
+        padding-top: 25px;
+    }
+    .section1{
+        flex-direction: column;
+        height: auto;
+    }
+
+
+}
+
+
+/* main-section */
+
+.heading h1{
+    text-align: center;
+    font-size: 55px;
+    letter-spacing: 1.5px;
+    color: #c6dc93;
+    font-family: 'Eczar', serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.grid{
+    margin: 20px;
+    display: grid;
+    width: 95rem;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: start;
+}
+
+
+.grid-items{
+    width: 90%;
+    background-color: white;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.grid-items:hover{
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0,0,0,0.5);
+}
+
+.card-img{
+    display: block;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 3rem;
+}
+
+.card-header{
+    font-size: 3rem;
+    font-weight: 500;
+    color: #c6dc93;
+    margin-bottom: 1.5rem;
+
+}
+
+.card-text{
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: white;
+    margin-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 60em){
+    
+    .grid{
+        margin: 20px auto;
+        width: 70%;
+        grid-gap: 3rem;
+    }
+}
+
+.sol-section{
+    height: 100vh;
+    background-color: #1c4a47;
+    color: #1c4a47;
+}
+
+.sol-section .title h1{
+    color: #1c4a47;
+    background-color: #b4dbb1;
+    text-align: center;
+    padding-left: 50px;
+    font-size: 55px;
+    letter-spacing: 1.5px;
+    font-family: 'Eczar', serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+
+
+/* solution */
+
+.section1, .section2, .section3, .section4{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.learn-more {
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.learn-more:hover{
+    color: #c6dc93;
+}
+
+.section1 .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    /* font-family: 'Raleway', sans-serif; */
+}
+
+.section1 .text-container{
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.section1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section1 .left h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #c6dc93;
+    letter-spacing: 1.5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section1 .left p{
+    color: white;
+    line-height: 1.4;
+    font-size: 17.5px;
+    letter-spacing: 1.2px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.left, .right{
+    flex: 1;
+}
+
+
+
+
+/* setion 2  */
+
+.learn-more {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section2 .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    /* font-family: 'Raleway', sans-serif; */
+}
+
+.section2 .text-container{
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.section2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section2 .right h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #c6dc93;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section2 .right p{
+    color: #fff;
+    line-height: 1.4;
+    font-size: 17.5px;
+    letter-spacing: 1.2px;
+    font-family: 'Montserrat', sans-serif;
+}
